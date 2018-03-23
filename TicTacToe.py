@@ -51,112 +51,112 @@ def is_tie(board):
     return "" not in board
 
 
-def twoTogetherAi(board, XO):
-    if board[0] == XO and board[1] == XO and board[2] == "":
+def two_together_ai(board, xo):
+    if board[0] == xo and board[1] == xo and board[2] == "":
         return 2
-    if board[3] == XO and board[4] == XO and board[5] == "":
+    if board[3] == xo and board[4] == xo and board[5] == "":
         return 5
-    if board[6] == XO and board[7] == XO and board[8] == "":
+    if board[6] == xo and board[7] == xo and board[8] == "":
         return 8
-    if board[1] == XO and board[2] == XO and board[0] == "":
+    if board[1] == xo and board[2] == xo and board[0] == "":
         return 0
-    if board[4] == XO and board[5] == XO and board[3] == "":
+    if board[4] == xo and board[5] == xo and board[3] == "":
         return 3
-    if board[7] == XO and board[8] == XO and board[6] == "":
+    if board[7] == xo and board[8] == xo and board[6] == "":
         return 6
-    if board[0] == XO and board[3] == XO and board[6] == "":
+    if board[0] == xo and board[3] == xo and board[6] == "":
         return 6
-    if board[1] == XO and board[4] == XO and board[7] == "":
+    if board[1] == xo and board[4] == xo and board[7] == "":
         return 7
-    if board[2] == XO and board[5] == XO and board[8] == "":
+    if board[2] == xo and board[5] == xo and board[8] == "":
         return 8
-    if board[3] == XO and board[6] == XO and board[0] == "":
+    if board[3] == xo and board[6] == xo and board[0] == "":
         return 0
-    if board[4] == XO and board[7] == XO and board[1] == "":
+    if board[4] == xo and board[7] == xo and board[1] == "":
         return 1
-    if board[5] == XO and board[8] == XO and board[2] == "":
+    if board[5] == xo and board[8] == xo and board[2] == "":
         return 2
-    if board[0] == XO and board[4] == XO and board[8] == "":
+    if board[0] == xo and board[4] == xo and board[8] == "":
         return 8
-    if board[2] == XO and board[4] == XO and board[6] == "":
+    if board[2] == xo and board[4] == xo and board[6] == "":
         return 6
-    if board[4] == XO and board[6] == XO and board[2] == "":
+    if board[4] == xo and board[6] == xo and board[2] == "":
         return 2
-    if board[4] == XO and board[8] == XO and board[0] == "":
+    if board[4] == xo and board[8] == xo and board[0] == "":
         return 0
-    if board[0] == XO and board[6] == XO and board[3] == "":
+    if board[0] == xo and board[6] == xo and board[3] == "":
         return 3
-    if board[2] == XO and board[8] == XO and board[5] == "":
+    if board[2] == xo and board[8] == xo and board[5] == "":
         return 5
-    if board[0] == XO and board[2] == XO and board[1] == "":
+    if board[0] == xo and board[2] == xo and board[1] == "":
         return 1
-    if board[6] == XO and board[8] == XO and board[7] == "":
-        return 7
-    else:
-        return -1
-
-
-def twoTogetherPlayer(board, XO):
-    if board[0] == XO and board[1] == XO and board[2] == "":
-        return 2
-    if board[3] == XO and board[4] == XO and board[5] == "":
-        return 5
-    if board[6] == XO and board[7] == XO and board[8] == "":
-        return 8
-    if board[1] == XO and board[2] == XO and board[0] == "":
-        return 0
-    if board[4] == XO and board[5] == XO and board[3] == "":
-        return 3
-    if board[7] == XO and board[8] == XO and board[6] == "":
-        return 6
-    if board[0] == XO and board[3] == XO and board[6] == "":
-        return 6
-    if board[1] == XO and board[4] == XO and board[7] == "":
-        return 7
-    if board[2] == XO and board[5] == XO and board[8] == "":
-        return 8
-    if board[3] == XO and board[6] == XO and board[0] == "":
-        return 0
-    if board[4] == XO and board[7] == XO and board[1] == "":
-        return 1
-    if board[5] == XO and board[8] == XO and board[2] == "":
-        return 2
-    if board[0] == XO and board[4] == XO and board[8] == "":
-        return 8
-    if board[2] == XO and board[4] == XO and board[6] == "":
-        return 6
-    if board[4] == XO and board[6] == XO and board[2] == "":
-        return 2
-    if board[4] == XO and board[8] == XO and board[0] == "":
-        return 0
-    if board[0] == XO and board[6] == XO and board[3] == "":
-        return 3
-    if board[2] == XO and board[8] == XO and board[5] == "":
-        return 5
-    if board[0] == XO and board[2] == XO and board[1] == "":
-        return 1
-    if board[6] == XO and board[8] == XO and board[7] == "":
+    if board[6] == xo and board[8] == xo and board[7] == "":
         return 7
     else:
         return -1
 
 
-def canMakeTricks(board, XO):
-    if board[0] == XO and board[1] == "" and board[2] == "" and board[6] == "":
+def two_together_player(board, xo):
+    if board[0] == xo and board[1] == xo and board[2] == "":
         return 2
-    if board[0] == XO and board[2] == "" and board[3] == "" and board[6] == "":
+    if board[3] == xo and board[4] == xo and board[5] == "":
+        return 5
+    if board[6] == xo and board[7] == xo and board[8] == "":
+        return 8
+    if board[1] == xo and board[2] == xo and board[0] == "":
+        return 0
+    if board[4] == xo and board[5] == xo and board[3] == "":
+        return 3
+    if board[7] == xo and board[8] == xo and board[6] == "":
         return 6
-    if board[2] == XO and board[0] == "" and board[1] == "" and board[8] == "":
-        return 0
-    if board[2] == XO and board[0] == "" and board[5] == "" and board[8] == "":
+    if board[0] == xo and board[3] == xo and board[6] == "":
+        return 6
+    if board[1] == xo and board[4] == xo and board[7] == "":
+        return 7
+    if board[2] == xo and board[5] == xo and board[8] == "":
         return 8
-    if board[6] == XO and board[0] == "" and board[3] == "" and board[8] == "":
+    if board[3] == xo and board[6] == xo and board[0] == "":
         return 0
-    if board[6] == XO and board[0] == "" and board[7] == "" and board[8] == "":
-        return 8
-    if board[8] == XO and board[2] == "" and board[5] == "" and board[6] == "":
+    if board[4] == xo and board[7] == xo and board[1] == "":
+        return 1
+    if board[5] == xo and board[8] == xo and board[2] == "":
         return 2
-    if board[8] == XO and board[2] == "" and board[6] == "" and board[7] == "":
+    if board[0] == xo and board[4] == xo and board[8] == "":
+        return 8
+    if board[2] == xo and board[4] == xo and board[6] == "":
+        return 6
+    if board[4] == xo and board[6] == xo and board[2] == "":
+        return 2
+    if board[4] == xo and board[8] == xo and board[0] == "":
+        return 0
+    if board[0] == xo and board[6] == xo and board[3] == "":
+        return 3
+    if board[2] == xo and board[8] == xo and board[5] == "":
+        return 5
+    if board[0] == xo and board[2] == xo and board[1] == "":
+        return 1
+    if board[6] == xo and board[8] == xo and board[7] == "":
+        return 7
+    else:
+        return -1
+
+
+def can_make_tricks(board, xo):
+    if board[0] == xo and board[1] == "" and board[2] == "" and board[6] == "":
+        return 2
+    if board[0] == xo and board[2] == "" and board[3] == "" and board[6] == "":
+        return 6
+    if board[2] == xo and board[0] == "" and board[1] == "" and board[8] == "":
+        return 0
+    if board[2] == xo and board[0] == "" and board[5] == "" and board[8] == "":
+        return 8
+    if board[6] == xo and board[0] == "" and board[3] == "" and board[8] == "":
+        return 0
+    if board[6] == xo and board[0] == "" and board[7] == "" and board[8] == "":
+        return 8
+    if board[8] == xo and board[2] == "" and board[5] == "" and board[6] == "":
+        return 2
+    if board[8] == xo and board[2] == "" and board[6] == "" and board[7] == "":
         return 6
     else:
         return -1
@@ -173,29 +173,23 @@ def run_game():
     first_player_marker = "X" if second_player_marker == "O" else "O"
     while True:
         if has_x_won(board):
-            print(f"Player {AI if first_player_marker == 'X' else Human} (X) won.")
+            print(f"{'The AI' if first_player_marker == 'X' else 'You'} (X) won.")
             break
         elif has_o_won(board):
-            print(f"Player {AI if second_player_marker == 'X' else Human} (O) won.")
+            print(f"{'The AI' if second_player_marker == 'X' else 'You'} (O) won.")
             break
         elif is_tie(board):
-            print("It is a tie, neither player wins.")
+            print("It is a tie, no one wins.")
             break
         else:
             is_input_error = False
             if count % 2 == 0:
-                position = -1
-
-                twoTogetherAi1 = twoTogetherAi(board, first_player_marker)
-                twoTogetherPlayer1 = twoTogetherPlayer(board, second_player_marker)
-                canMakeTricks1 = canMakeTricks(board, first_player_marker)
-
-                if twoTogetherAi1 != -1:
-                    position = twoTogetherAi1
-                elif twoTogetherPlayer1 != -1:
-                    position = twoTogetherPlayer1
-                elif canMakeTricks1 != -1:
-                    position = canMakeTricks1
+                if two_together_ai(board, first_player_marker) != -1:
+                    position = two_together_ai(board, first_player_marker)
+                elif two_together_player(board, second_player_marker) != -1:
+                    position = two_together_player(board, second_player_marker)
+                elif can_make_tricks(board, first_player_marker) != -1:
+                    position = can_make_tricks(board, first_player_marker)
                 else:
                     if board[4] == "":
                         position = 4
@@ -218,7 +212,7 @@ def run_game():
             else:
                 try:
                     position = int(input(
-                        f"Player Human ({second_player_marker}), choose your position (1 through 9): ")) - 1
+                        f"Player ({second_player_marker}), choose your position (1 through 9): ")) - 1
                 except ValueError:
                     print("The position you enter must be an integer.")
                     is_input_error = True
@@ -233,6 +227,7 @@ def run_game():
                             board[position] = first_player_marker
                         else:
                             board[position] = second_player_marker
+                        print("{} moved to position {}.".format("The AI" if count % 2 == 0 else "You", position + 1))
                         print_board(board)
                         count += 1
 
