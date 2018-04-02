@@ -96,10 +96,11 @@ def run_game():
                         print_board(board)
                         count += 1
 
-while True:
-    run_game()
-    play_again = input("Do you want to play again? Enter \"yes\" or \"no\": ").lower()
-    while play_again != "yes" and play_again != "no":
-        play_again = input("Please enter either \"yes\" or \"no\": ").lower()
-    if play_again == "no":
-        break
+if __name__ == "__main__":
+    while True:
+        run_game()
+        play_again = input("Do you want to play again? Enter \"yes\" or \"no\": ").lower()
+        while play_again != "yes" and play_again != "no":
+            play_again = input("Please enter either \"yes\" or \"no\": ").lower()
+        if play_again == "no":
+            break
